@@ -1,15 +1,4 @@
-export type PlayerType = {
-  name: string;
-  position: string;
-  number: number;
-  country: string;
-  age: number;
-  height: number;
-  weight: number;
-  games: number;
-  goals: number;
-};
-
+import { PlayerType } from "../types";
 function Player({
   name,
   position,

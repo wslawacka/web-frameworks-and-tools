@@ -9,12 +9,25 @@
 import Menu from "./components/Menu";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import { useState } from "react";
+import { TeamType } from "./types";
 
 function App() {
+  const [teams, setTeams] = useState<TeamType[]>([]);
+  const [selectedTeam, setSelectedTeam] = useState<string>("");
   return (
     <>
-      <Menu teamName="Team Kapisia" />
-      <Body />
+      <Menu
+        teams={teams}
+        selectedTeam={selectedTeam}
+        setSelectedTeam={setSelectedTeam}
+      />
+      <Body
+        teams={teams}
+        setTeams={setTeams}
+        selectedTeam={selectedTeam}
+        setSelectedTeam={setSelectedTeam}
+      />
       <Footer />
     </>
   );
