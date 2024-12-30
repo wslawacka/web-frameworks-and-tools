@@ -17,19 +17,20 @@ header {
   width: 100%;
   height: 94px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  gap: 40px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
 
-header > h1 {
+header h1 {
   font-weight: 400;
   font-size: 32px;
 }
 
-header > h2 {
+header h2 {
   font-weight: 400;
   font-size: 20px;
   padding-top: 6px;
@@ -77,8 +78,8 @@ footer > p {
 .player {
   padding: 24px 32px;
   background-color: #c6ebbe;
-  width: 234px;
-  height: 240px;
+  min-width: 300px;
+  min-height: 240px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
   gap: 8px;
@@ -111,6 +112,7 @@ footer > p {
   margin: 0 auto;
   padding: 10px 0;
   background-color: #98a7c3;
+  border-radius: 2px;
   gap: 60px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
@@ -198,6 +200,10 @@ form > button:hover {
   background-color: #6e7bbf;
 }
 
+form > button:active {
+  background-color: #8591d5;
+}
+
 .forms-container {
   display: flex;
   justify-content: center;
@@ -224,4 +230,25 @@ select:focus {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
   margin: 10px 0;
+}
+
+#plus-button {
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: #6e7bbf;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+#plus-button:hover {
+  background-color: #8591d5;
+}
+
+#plus-button:active {
+  background-color: #6e7bbf;
 }

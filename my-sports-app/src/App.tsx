@@ -19,15 +19,11 @@ function App() {
     <>
       <Menu
         teams={teams}
-        selectedTeam={selectedTeam}
-        setSelectedTeam={setSelectedTeam}
-      />
-      <Body
-        teams={teams}
         setTeams={setTeams}
         selectedTeam={selectedTeam}
         setSelectedTeam={setSelectedTeam}
       />
+      <Body teams={teams} setTeams={setTeams} selectedTeam={selectedTeam} />
       <Footer />
     </>
   );

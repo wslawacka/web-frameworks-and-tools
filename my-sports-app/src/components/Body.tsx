@@ -9,12 +9,10 @@ function Body({
   teams,
   setTeams,
   selectedTeam,
-  setSelectedTeam,
 }: {
   teams: TeamType[];
   setTeams: Function;
   selectedTeam: string;
-  setSelectedTeam: Function;
 }) {
   const [players, setPlayers] = useState<PlayerType[]>([]);
 
@@ -191,31 +189,7 @@ function Body({
           </button>
         </form>
 
-        <form id="add-team-form">
-          <h2>Add Team:</h2>
-          <input name="teamName" type="text" placeholder="Name" />
-          <input name="logo" type="text" placeholder="Logo" />
-          <input
-            name="founded"
-            type="number"
-            placeholder="Founded"
-            min="1000"
-            max="2024"
-          />
-          <input name="stadium" type="text" placeholder="Stadium" />
-          <input name="coach" type="text" placeholder="Coach" />
-          <input name="president" type="text" placeholder="President" />
-          <input name="website" type="text" placeholder="Website" />
-          <input name="league" type="text" placeholder="League" />
-          <input name="country" type="text" placeholder="Country" />
-          <input name="city" type="text" placeholder="City" />
-          <input name="wins" type="number" placeholder="Wins" min="0" />
-          <input name="losses" type="number" placeholder="Losses" min="0" />
-          <input name="draws" type="number" placeholder="Draws" min="0" />
-          <button type="submit" onClick={(event) => handleAddTeam(event)}>
-            Add Team
-          </button>
-        </form>
+        {/* show it only after clicking add team */}
       </div>
     </main>
   );
