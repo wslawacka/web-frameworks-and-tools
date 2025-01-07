@@ -4,9 +4,11 @@ import axios from "axios";
 function AddTeamForm({
   teams,
   setTeams,
+  setShowForm,
 }: {
   teams: TeamType[];
   setTeams: Function;
+  setShowForm: Function;
 }) {
   const handleAddTeam = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -42,6 +44,8 @@ function AddTeamForm({
       .catch((error) =>
         console.error("There was an error adding the team!", error)
       );
+
+    setShowForm(false);
   };
 
   return (
@@ -61,7 +65,7 @@ function AddTeamForm({
       <input name="losses" type="number" placeholder="Losses" />
       <input name="draws" type="number" placeholder="Draws" />
       <button type="submit" onClick={(e) => handleAddTeam(e)}>
-        Add Team
+        Submit
       </button>
     </form>
   );

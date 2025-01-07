@@ -4,12 +4,15 @@
   cursor: default;
 }
 
+body {
+  font-family: Inter, sans-serif;
+  background-color: #fafaf8;
+}
+
 #root {
   padding-top: 100px;
   text-align: center;
-  margin: 30px 0;
-  font-family: Inter, sans-serif;
-  background-color: #fafaf8;
+  margin: 40px 0;
 }
 
 form {
@@ -17,7 +20,7 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 form > h2 {
@@ -40,7 +43,8 @@ form > input:focus {
   outline: none;
 }
 
-form > button {
+form > button,
+.add-team-button {
   padding: 6px 10px;
   border-radius: 6px;
   border: none;

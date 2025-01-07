@@ -44,19 +44,4 @@ function Team({ team }: { team: TeamType }) {
   );
 }
 
-// xport type TeamType = {
-//   id: number;
-//   teamName: string;
-//   logo: string;
-//   founded: number;
-//   stadium: string;
-//   coach: string;
-//   president: string;
-//   website: string;
-//   league: string;
-//   country: string;
-//   city: string;
-//   statistics: { wins: number; losses: number; draws: number };
-// };
-
 export default Team;

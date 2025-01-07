@@ -107,6 +107,78 @@
         "losses": 0,
         "draws": 0
       }
+    },
+    {
+      "id": 7,
+      "teamName": "Team Name",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
+    },
+    {
+      "id": 8,
+      "teamName": "Team Name",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
+    },
+    {
+      "id": 9,
+      "teamName": "kapis team",
+      "logo": "https://via.placeholder.com/100",
+      "founded": "1988",
+      "stadium": "Mucharz",
+      "coach": "Kapi",
+      "president": "Kapi2",
+      "website": "www.kcwerusie.pl",
+      "league": "kapisiowa",
+      "country": "Poland",
+      "city": "Lublin",
+      "statistics": {
+        "wins": "7",
+        "losses": "8",
+        "draws": "4"
+      }
+    },
+    {
+      "id": 10,
+      "teamName": "Team Name",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
     }
   ]
 }
