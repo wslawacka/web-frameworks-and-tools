@@ -1,4 +1,5 @@
 import { PlayerType } from "../types";
+import "../styles/player.css";
 function Player({
   name,
   position,

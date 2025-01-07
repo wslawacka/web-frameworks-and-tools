@@ -1,0 +1,43 @@
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+#players-container > h2 {
+  font-weight: 400;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.player {
+  padding: 24px 32px;
+  background-color: #c6ebbe;
+  min-width: 300px;
+  min-height: 240px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  gap: 8px;
+}
+
+.player > h2 {
+  font-weight: 400;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.player-info {
+  text-align: left;
+  line-height: 20px;
+}
+
+.player-info-name {
+  font-weight: 600;
+}
+
+.player-info-name > span {
+  font-weight: 400;
+}

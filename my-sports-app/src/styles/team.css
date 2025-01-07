@@ -1,0 +1,31 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #c6ebbe;
+  width: 30%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.team-container > h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.team-info {
+  text-align: left;
+  line-height: 22px;
+}
+
+.team-info > p > span {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.back-to-all-teams {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}

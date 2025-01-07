@@ -3,7 +3,7 @@
     {
       "id": 1,
       "teamName": "Team A",
-      "logo": "https://example.com/logoA.png",
+      "logo": "https://via.placeholder.com/100x100",
       "founded": 1900,
       "stadium": "Stadium A",
       "coach": "Coach A",
@@ -21,7 +21,7 @@
     {
       "id": 2,
       "teamName": "Team B",
-      "logo": "https://example.com/logoB.png",
+      "logo": "https://via.placeholder.com/100x100",
       "founded": 1920,
       "stadium": "Stadium B",
       "coach": "Coach B",
@@ -39,7 +39,7 @@
     {
       "id": 3,
       "teamName": "Team C",
-      "logo": "https://example.com/logoC.png",
+      "logo": "https://via.placeholder.com/100x100",
       "founded": 1930,
       "stadium": "Stadium C",
       "coach": "Coach C",

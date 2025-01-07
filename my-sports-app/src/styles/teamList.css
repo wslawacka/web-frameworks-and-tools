@@ -1,14 +1,27 @@
-div {
-  padding: 100px 0px;
+.team-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #c6ebbe;
+  padding: 20px;
+  width: 30%;
+  margin: 0 auto;
 }
 
-h1 {
+.team-list-container > h1 {
   text-align: center;
   font-weight: 400;
   font-size: 24px;
 }
 
-ul {
+.team-list-container > h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.team-list-container > ul {
+  margin-top: 20px;
   list-style-type: none;
   padding-left: 0;
 }
@@ -16,4 +29,7 @@ ul {
 .link {
   text-decoration: none;
   color: black;
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
 }

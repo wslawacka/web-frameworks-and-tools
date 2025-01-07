@@ -1,6 +1,7 @@
-function Footer(){
+import "../styles/footer.css";
 
-  return(
+function Footer() {
+  return (
     <footer>
       <p>&copy; 2024 Sports Team Manager. All rights reserved.</p>
     </footer>

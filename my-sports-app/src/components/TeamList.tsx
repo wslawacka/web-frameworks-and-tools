@@ -25,8 +25,9 @@ function TeamList({
   }, []);
 
   return (
-    <div>
-      <h1>Team List</h1>
+    <div className="team-list-container">
+      <h1>Teams</h1>
+      <h2>Click on a team name to see more information</h2>
       <ul>
         {teams.map((team) => (
           <li key={team.id}>

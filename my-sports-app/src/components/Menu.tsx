@@ -1,4 +1,4 @@
-import { TeamType } from "../types";
+import "../styles/menu.css";
 
 function Menu() {
   // const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -18,13 +18,11 @@ function Menu() {
   //           ))}
   //         </select>
 
+  //{/* <button id="plus-button" /*onClick={handleClick}*/>+</button> */}
+
   return (
     <header>
-      <div>
-        <h1>Sports Team Manager</h1>
-        <h2>Team's name:</h2>
-      </div>
-      <button id="plus-button" /*onClick={handleClick}*/>+</button>
+      <h1>Sports Team Manager</h1>
     </header>
   );
 }
