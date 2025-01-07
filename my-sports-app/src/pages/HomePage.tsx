@@ -1,4 +1,8 @@
+import { TeamType } from "../types";
+
+import Menu from "../components/Menu";
 import TeamList from "../components/TeamList";
+import Footer from "../components/Footer";
 
 function HomePage({
   teams,
@@ -8,10 +12,11 @@ function HomePage({
   setTeams: Function;
 }) {
   return (
-    <div>
-      HomePage
+    <>
+      <Menu />
       <TeamList teams={teams} setTeams={setTeams} />
-    </div>
+      <Footer />
+    </>
   );
 }
 
