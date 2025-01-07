@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { TeamType } from "../types";
 
 import Menu from "../components/Menu";
 import TeamList from "../components/TeamList";
 import Footer from "../components/Footer";
 import AddTeamForm from "../components/forms/AddTeamForm";
-import { useState } from "react";
 
 function HomePage({
   teams,

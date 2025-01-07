@@ -1,0 +1,8 @@
+.player-list-container > ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}

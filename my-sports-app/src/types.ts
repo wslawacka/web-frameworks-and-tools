@@ -14,7 +14,8 @@ export type TeamType = {
 };
 
 export type PlayerType = {
-  id: number;
+  id: string;
+  teamId: string;
   name: string;
   position: string;
   number: number;

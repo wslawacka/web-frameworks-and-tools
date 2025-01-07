@@ -1,6 +1,8 @@
 import { PlayerType } from "../types";
 import "../styles/player.css";
 function Player({
+  id,
+  teamId,
   name,
   position,
   number,
@@ -11,6 +13,8 @@ function Player({
   games,
   goals,
 }: {
+  id: string;
+  teamId: string;
   name: string;
   position: string;
   number: number;
@@ -23,6 +27,8 @@ function Player({
 }) {
   // create a player object from props
   const player: PlayerType = {
+    id,
+    teamId,
     name,
     position,
     number,
