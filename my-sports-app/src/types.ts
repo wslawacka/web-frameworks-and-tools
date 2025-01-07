@@ -1,4 +1,5 @@
 export type TeamType = {
+  id: number;
   teamName: string;
   logo: string;
   founded: number;
@@ -13,6 +14,7 @@ export type TeamType = {
 };
 
 export type PlayerType = {
+  id: number;
   name: string;
   position: string;
   number: number;

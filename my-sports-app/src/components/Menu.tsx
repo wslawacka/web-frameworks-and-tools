@@ -5,18 +5,24 @@ function Menu({
   setTeams,
   selectedTeam,
   setSelectedTeam,
+  isAddTeamClicked,
+  setIsAddTeamClicked,
 }: {
   teams: TeamType[];
   setTeams: Function;
   selectedTeam: string;
   setSelectedTeam: Function;
+  isAddTeamClicked: boolean;
+  setIsAddTeamClicked: Function;
 }) {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const teamName = event.target.value;
     setSelectedTeam(teamName);
   };
 
-  const handleClick = () => {};
+  const handleClick = () => {
+    setIsAddTeamClicked(true);
+  };
 
   return (
     <header>

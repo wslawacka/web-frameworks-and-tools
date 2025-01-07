@@ -6,26 +6,23 @@
 
 // Ensure that the application correctly communicates with the REST API, and that all features such as viewing, adding, and updating data are functioning. The final deliverable will be a fully functional React application with REST API integration, ready for deployment.
 
-import Menu from "./components/Menu";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
 import { useState } from "react";
-import { TeamType } from "./types";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import TeamPage from "./pages/TeamPage";
 
 function App() {
   const [teams, setTeams] = useState<TeamType[]>([]);
-  const [selectedTeam, setSelectedTeam] = useState<string>("");
   return (
-    <>
-      <Menu
-        teams={teams}
-        setTeams={setTeams}
-        selectedTeam={selectedTeam}
-        setSelectedTeam={setSelectedTeam}
-      />
-      <Body teams={teams} setTeams={setTeams} selectedTeam={selectedTeam} />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage teams={teams} setTeams={setTeams} />}
+        />
+        <Route path="/team/:id" element={<TeamPage />} />
+      </Routes>
+    </Router>
   );
 }
 

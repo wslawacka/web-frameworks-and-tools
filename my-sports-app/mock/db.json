@@ -1,0 +1,58 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "teamName": "Team A",
+      "logo": "https://example.com/logoA.png",
+      "founded": 1900,
+      "stadium": "Stadium A",
+      "coach": "Coach A",
+      "president": "President A",
+      "website": "https://teamA.com",
+      "league": "League A",
+      "country": "Country A",
+      "city": "City A",
+      "statistics": {
+        "wins": 10,
+        "losses": 5,
+        "draws": 3
+      }
+    },
+    {
+      "id": 2,
+      "teamName": "Team B",
+      "logo": "https://example.com/logoB.png",
+      "founded": 1920,
+      "stadium": "Stadium B",
+      "coach": "Coach B",
+      "president": "President B",
+      "website": "https://teamB.com",
+      "league": "League B",
+      "country": "Country B",
+      "city": "City B",
+      "statistics": {
+        "wins": 8,
+        "losses": 7,
+        "draws": 2
+      }
+    },
+    {
+      "id": 3,
+      "teamName": "Team C",
+      "logo": "https://example.com/logoC.png",
+      "founded": 1930,
+      "stadium": "Stadium C",
+      "coach": "Coach C",
+      "president": "President C",
+      "website": "https://teamC.com",
+      "league": "League C",
+      "country": "Country C",
+      "city": "City C",
+      "statistics": {
+        "wins": 12,
+        "losses": 4,
+        "draws": 1
+      }
+    }
+  ]
+}
