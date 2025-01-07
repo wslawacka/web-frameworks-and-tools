@@ -1,5 +1,6 @@
 import { TeamType } from "../../types";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 function AddTeamForm({
   teams,
@@ -17,7 +18,7 @@ function AddTeamForm({
     const form = document.getElementById("add-team-form") as HTMLFormElement;
 
     const newTeam: TeamType = {
-      id: teams.length + 1,
+      id: uuidv4(),
       teamName: form?.teamName.value || "Team Name",
       logo: form?.logo.value || "https://via.placeholder.com/100",
       founded: form?.founded.value || 0,
@@ -36,7 +37,7 @@ function AddTeamForm({
     };
 
     axios
-      .post("http://localhost:5000/teams", newTeam)
+      .post("http://localhost:3001/teams", newTeam)
       .then((response) => {
         setTeams([...teams, response.data]);
         form?.reset();

@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 function TeamPage({ teams }: { teams: TeamType[] }) {
   const { id } = useParams<{ id: string }>();
-  const team = teams.find((team) => team.id === parseInt(id || ""));
+  const team = teams.find((team) => team.id === id || "");
 
   if (!team) return <div>Team not found</div>;
 

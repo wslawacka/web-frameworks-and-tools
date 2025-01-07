@@ -1,5 +1,5 @@
 export type TeamType = {
-  id: number;
+  id: string;
   teamName: string;
   logo: string;
   founded: number;

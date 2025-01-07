@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { TeamType } from "../types";
 import axios from "axios";
@@ -13,7 +13,7 @@ function TeamList({
 }) {
   const fetchTeams = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/teams");
+      const response = await axios.get("http://localhost:3001/teams");
       setTeams(response.data);
     } catch (error) {
       console.error("Error fetching teams:", error);
@@ -23,6 +23,17 @@ function TeamList({
   useEffect(() => {
     fetchTeams();
   }, []);
+
+  const deleteTeam = async (id: string) => {
+    try {
+      console.log(`Attempting to delete team with id: ${id}`);
+      await axios.delete(`http://localhost:3001/teams/${id}`);
+      fetchTeams();
+    } catch (error) {
+      console.error("Error deleting team:", error);
+      alert("Failed to delete the team. Please try again.");
+    }
+  };
 
   return (
     <div className="team-list-container">
@@ -34,6 +45,12 @@ function TeamList({
             <Link className="link" to={`/team/${team.id}`}>
               {team.teamName}
             </Link>
+            <button
+              className="delete-team-button"
+              onClick={() => deleteTeam(team.id)}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
