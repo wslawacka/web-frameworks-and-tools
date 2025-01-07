@@ -53,6 +53,60 @@
         "losses": 4,
         "draws": 1
       }
+    },
+    {
+      "id": 4,
+      "teamName": "Werka Team",
+      "logo": "https://via.placeholder.com/100",
+      "founded": "1233",
+      "stadium": "Lublin",
+      "coach": "Werusia",
+      "president": "Werusia2",
+      "website": "www.weri.com",
+      "league": "werleague",
+      "country": "Poland",
+      "city": "Lublin",
+      "statistics": {
+        "wins": "6",
+        "losses": "2",
+        "draws": "-6"
+      }
+    },
+    {
+      "id": 5,
+      "teamName": "Kapiszon",
+      "logo": "https://via.placeholder.com/100",
+      "founded": "3333",
+      "stadium": "Mucharz",
+      "coach": "Kapi",
+      "president": "Kapi2",
+      "website": "www.kapi.pl",
+      "league": "kapisiowa",
+      "country": "USA",
+      "city": "Lublin",
+      "statistics": {
+        "wins": "3",
+        "losses": "2",
+        "draws": "1"
+      }
+    },
+    {
+      "id": 6,
+      "teamName": "random",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
     }
   ]
 }

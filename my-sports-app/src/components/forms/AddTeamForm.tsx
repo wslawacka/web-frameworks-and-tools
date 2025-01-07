@@ -1,4 +1,5 @@
 import { TeamType } from "../../types";
+import axios from "axios";
 
 function AddTeamForm({
   teams,
@@ -14,6 +15,7 @@ function AddTeamForm({
     const form = document.getElementById("add-team-form") as HTMLFormElement;
 
     const newTeam: TeamType = {
+      id: teams.length + 1,
       teamName: form?.teamName.value || "Team Name",
       logo: form?.logo.value || "https://via.placeholder.com/100",
       founded: form?.founded.value || 0,
@@ -31,9 +33,15 @@ function AddTeamForm({
       },
     };
 
-    setTeams([...teams, newTeam]);
-
-    form?.reset();
+    axios
+      .post("http://localhost:5000/teams", newTeam)
+      .then((response) => {
+        setTeams([...teams, response.data]);
+        form?.reset();
+      })
+      .catch((error) =>
+        console.error("There was an error adding the team!", error)
+      );
   };
 
   return (
