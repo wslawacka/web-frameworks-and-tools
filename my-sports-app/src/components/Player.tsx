@@ -12,6 +12,7 @@ function Player({
   weight,
   games,
   goals,
+  deletePlayer,
 }: {
   id: string;
   teamId: string;
@@ -24,6 +25,7 @@ function Player({
   weight: number;
   games: number;
   goals: number;
+  deletePlayer: Function;
 }) {
   // create a player object from props
   const player: PlayerType = {
@@ -69,6 +71,12 @@ function Player({
           Goals: <span>{player.goals}</span>
         </p>
       </div>
+      <button
+        className="delete-player-button"
+        onClick={() => deletePlayer(player.id)}
+      >
+        Delete
+      </button>
     </div>
   );
 }

@@ -29,6 +29,12 @@
   padding-left: 0;
 }
 
+.team-list-container > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .link {
   text-decoration: none;
   color: black;

@@ -28,6 +28,11 @@ function PlayerList({
     fetchPlayers();
   }, [id]);
 
+  const deletePlayer = async (id: string) => {
+    await axios.delete(`http://localhost:3001/players/${id}`);
+    fetchPlayers();
+  };
+
   return (
     <div className="player-list-container">
       <h2>Players</h2>
@@ -46,6 +51,7 @@ function PlayerList({
               weight={player.weight}
               games={player.games}
               goals={player.goals}
+              deletePlayer={deletePlayer}
             />
           </li>
         ))}

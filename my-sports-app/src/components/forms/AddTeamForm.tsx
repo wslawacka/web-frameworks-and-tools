@@ -1,6 +1,7 @@
 import { TeamType } from "../../types";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
+import "../../styles/forms.css";
 
 function AddTeamForm({
   teams,

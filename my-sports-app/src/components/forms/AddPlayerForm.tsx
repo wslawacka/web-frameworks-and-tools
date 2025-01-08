@@ -1,6 +1,7 @@
 import axios from "axios";
 import { PlayerType } from "../../types";
 import { v4 as uuidv4 } from "uuid";
+import "../../styles/forms.css";
 
 function AddPlayerForm({
   players,
@@ -77,7 +78,7 @@ function AddPlayerForm({
       <input name="playerGames" type="number" placeholder="Games" min="0" />
       <input name="playerGoals" type="number" placeholder="Goals" min="0" />
       <button type="submit" onClick={(event) => handleAddPlayer(event)}>
-        Add Player
+        Submit
       </button>
     </form>
   );

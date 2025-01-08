@@ -1,21 +1,7 @@
-.players {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-
-#players-container > h2 {
-  font-weight: 400;
-  font-size: 20px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
 .player {
   padding: 24px 32px;
-  background-color: #c6ebbe;
-  min-width: 300px;
+  background-color: #aecad6;
+  min-width: 280px;
   min-height: 240px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
@@ -40,4 +26,24 @@
 
 .player-info-name > span {
   font-weight: 400;
+}
+
+.delete-player-button {
+  background-color: rgba(255, 41, 41, 0.7);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+  margin-top: 12px;
+}
+
+.delete-player-button:hover {
+  background-color: rgba(255, 41, 41, 1);
+}
+
+.delete-player-button:active {
+  background-color: rgba(255, 41, 41, 0.5);
 }
