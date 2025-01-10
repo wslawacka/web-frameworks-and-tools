@@ -3,15 +3,19 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  background-color: #c6ebbe;
+  background-color: #d6eac3;
   width: 30%;
   padding: 20px;
   margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
 
 .team-container > h2 {
   font-size: 24px;
   font-weight: 400;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .team-container > img {
@@ -35,12 +39,10 @@
 }
 
 .add-player-button {
-  padding: 6px 10px;
+  padding: 8px 16px;
   border-radius: 6px;
   border: none;
-  width: 100px;
-  background-color: #8591d5;
-  color: #fff;
+  background-color: #b9cbca;
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 14px;
@@ -50,9 +52,9 @@
 }
 
 .add-player-button:hover {
-  background-color: #6d78c2;
+  background-color: #82a3a1;
 }
 
 .add-player-button:active {
-  background-color: #525d99;
+  background-color: #66817e;
 }

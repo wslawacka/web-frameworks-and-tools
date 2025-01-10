@@ -1,4 +1,247 @@
 {
-  "teams": [],
-  "players": []
+  "teams": [
+    {
+      "id": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "teamName": "Werka Team",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
+    },
+    {
+      "id": "8240b278-a2f2-4038-86d1-dace3ddee760",
+      "teamName": "hhjk",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
+    },
+    {
+      "id": "dd174219-9ae2-4c66-be41-7a03421b47aa",
+      "teamName": "new",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
+    },
+    {
+      "id": "88ed26c5-bf02-430b-ab1e-880187c2ac26",
+      "teamName": "Kapiszon",
+      "logo": "https://via.placeholder.com/100",
+      "founded": 0,
+      "stadium": "Stadium",
+      "coach": "Coach",
+      "president": "President",
+      "website": "Website",
+      "league": "League",
+      "country": "Country",
+      "city": "City",
+      "statistics": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0
+      }
+    }
+  ],
+  "players": [
+    {
+      "id": "f04882a5-1659-4abf-bc0c-e3c21ceee855",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "weri",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "5d421fd7-f33a-402d-988b-bcbdf0ec1a74",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "pop",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "5cf4367c-2a08-43bf-8a6d-1196bbe492d8",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "32",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "7c3c8f76-b591-4c2e-9f0d-f17fe4627c81",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "wwe",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "0bf9ff10-17bc-4e81-8e54-0413fe31fa83",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "swqdq",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "66b83906-9d4c-4443-a25f-dda517290b09",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "hhjikbmnvhj ",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "b4fdf0b4-71bd-4e9d-9d18-838e4e9f40f9",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "tdrs",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "69be569a-6e0e-4394-a139-10bed1e91967",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "player1",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "9a08656d-9ad3-4e8e-b2d7-a0701693789b",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "player2",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "28481ec1-c14c-4711-84a2-a21c6d42de8d",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "player3",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "b57a9ab7-f04e-46c9-b287-e546491d1c05",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "player4",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "ab21e891-0727-4c5a-bf2a-76814b049e5f",
+      "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
+      "name": "wwe",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    },
+    {
+      "id": "083ab654-9d9a-417e-baab-793ef48cabf2",
+      "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
+      "name": "weri",
+      "position": "Position",
+      "number": 0,
+      "country": "Country",
+      "age": 0,
+      "height": 0,
+      "weight": 0,
+      "games": 0,
+      "goals": 0
+    }
+  ]
 }

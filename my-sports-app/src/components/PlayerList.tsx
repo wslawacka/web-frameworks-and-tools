@@ -35,7 +35,7 @@ function PlayerList({
 
   return (
     <div className="player-list-container">
-      <h2>Players</h2>
+      <h2>Players:</h2>
       <ul>
         {players.map((player) => (
           <li key={player.id}>
