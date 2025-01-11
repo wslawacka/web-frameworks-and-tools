@@ -14,14 +14,14 @@ function TeamPage(props: TeamPageProps) {
   const { id } = useParams<{ id: string }>();
   const team = props.teams.find((team) => team.id === id);
 
-  if (!team) return <div>Team not found</div>;
-
   const [players, setPlayers] = useState<PlayerType[]>([]);
   const [playersNumber, setPlayersNumber] = useState(0);
 
   useEffect(() => {
     setPlayersNumber(players.length);
   }, [players]);
+
+  if (!team) return <div>Team not found</div>;
 
   return (
     <>
