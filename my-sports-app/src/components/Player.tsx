@@ -67,6 +67,7 @@ function Player(props: PlayerProps) {
           {editingField === "position" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Position"
                 type="text"
                 value={editingValue ?? ""}
@@ -96,6 +97,7 @@ function Player(props: PlayerProps) {
           {editingField === "number" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Number"
                 type="number"
                 value={editingValue ?? ""}
@@ -125,6 +127,7 @@ function Player(props: PlayerProps) {
           {editingField === "country" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Country"
                 type="text"
                 value={editingValue ?? ""}
@@ -154,6 +157,7 @@ function Player(props: PlayerProps) {
           {editingField === "age" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Age"
                 type="number"
                 value={editingValue ?? ""}
@@ -183,6 +187,7 @@ function Player(props: PlayerProps) {
           {editingField === "height" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Height"
                 type="number"
                 value={editingValue ?? ""}
@@ -212,6 +217,7 @@ function Player(props: PlayerProps) {
           {editingField === "games" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Games"
                 type="number"
                 value={editingValue ?? ""}
@@ -241,6 +247,7 @@ function Player(props: PlayerProps) {
           {editingField === "goals" ? (
             <div>
               <input
+                className="edit-input"
                 placeholder="Goals"
                 type="number"
                 value={editingValue ?? ""}

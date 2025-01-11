@@ -37,5 +37,58 @@
       }
     }
   ],
-  "players": []
+  "players": [
+    {
+      "id": "791174c5-1d48-46ab-9d30-d4d4da9fe1c6",
+      "teamId": "6191fe6e-a466-49a8-a267-56d838713cb8",
+      "name": "New Player",
+      "position": "Defender",
+      "number": "14",
+      "country": "USA",
+      "age": "25",
+      "height": "187",
+      "weight": "90",
+      "games": "4",
+      "goals": "14"
+    },
+    {
+      "id": "9fa6bbca-260a-4a43-8c71-f99f0ce9ace0",
+      "teamId": "6191fe6e-a466-49a8-a267-56d838713cb8",
+      "name": "New Player2",
+      "position": "Goalkeeper",
+      "number": "17",
+      "country": "USA",
+      "age": "30",
+      "height": "188",
+      "weight": "96",
+      "games": "2",
+      "goals": "0"
+    },
+    {
+      "id": "c8d5c0ca-4996-4ee3-a2ae-59963e0c400f",
+      "teamId": "6191fe6e-a466-49a8-a267-56d838713cb8",
+      "name": "New Player3",
+      "position": "Attacking Midfielder",
+      "number": "21",
+      "country": "USA",
+      "age": "22",
+      "height": "179",
+      "weight": "88",
+      "games": "6",
+      "goals": "1"
+    },
+    {
+      "id": "aa78a936-0e7d-4d77-a240-d79764a8df2e",
+      "teamId": "b0d7d769-7e39-4c99-85e7-5bc0dba94130",
+      "name": "New Player",
+      "position": "Defender",
+      "number": "12",
+      "country": "Spain",
+      "age": "27",
+      "height": "190",
+      "weight": "90",
+      "games": "6",
+      "goals": "7"
+    }
+  ]
 }

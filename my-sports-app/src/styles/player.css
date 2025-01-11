@@ -1,11 +1,11 @@
 .player {
   padding: 24px 32px;
   background-color: #e0efd2;
-  min-width: 280px;
+  min-width: 380px;
   min-height: 240px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-  gap: 8px;
+  gap: 6px;
   border-radius: 4px;
 }
 
@@ -18,7 +18,7 @@
 
 .player-info {
   text-align: left;
-  line-height: 20px;
+  line-height: 24px;
 }
 
 .player-info-item {
@@ -54,4 +54,8 @@ span.player-info-item > span {
 
 .delete-player-button:active {
   background-color: rgba(255, 41, 41, 0.5);
+}
+
+.player .edit-input {
+  max-width: 80px;
 }

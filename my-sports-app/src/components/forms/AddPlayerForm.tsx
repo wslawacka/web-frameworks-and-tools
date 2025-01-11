@@ -45,6 +45,14 @@ function AddPlayerForm(props: AddPlayerFormProps) {
       return;
     }
 
+    // check if the player number is already taken
+    if (
+      props.players.some((player) => player.number === form.playerNumber.value)
+    ) {
+      alert("Player number already taken");
+      return;
+    }
+
     const newPlayer: PlayerType = {
       id: uuidv4(),
       teamId: props.id,
