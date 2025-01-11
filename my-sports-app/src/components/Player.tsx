@@ -1,19 +1,8 @@
 import { PlayerType } from "../types";
+
 import "../styles/player.css";
-function Player({
-  id,
-  teamId,
-  name,
-  position,
-  number,
-  country,
-  age,
-  height,
-  weight,
-  games,
-  goals,
-  deletePlayer,
-}: {
+
+interface PlayerProps {
   id: string;
   teamId: string;
   name: string;
@@ -26,20 +15,22 @@ function Player({
   games: number;
   goals: number;
   deletePlayer: Function;
-}) {
+}
+
+function Player(props: PlayerProps) {
   // create a player object from props
   const player: PlayerType = {
-    id,
-    teamId,
-    name,
-    position,
-    number,
-    country,
-    age,
-    height,
-    weight,
-    games,
-    goals,
+    id: props.id,
+    teamId: props.teamId,
+    name: props.name,
+    position: props.position,
+    number: props.number,
+    country: props.country,
+    age: props.age,
+    height: props.height,
+    weight: props.weight,
+    games: props.games,
+    goals: props.goals,
   };
 
   return (
@@ -73,7 +64,7 @@ function Player({
       </div>
       <button
         className="delete-player-button"
-        onClick={() => deletePlayer(player.id)}
+        onClick={() => props.deletePlayer(player.id)}
       >
         Delete
       </button>

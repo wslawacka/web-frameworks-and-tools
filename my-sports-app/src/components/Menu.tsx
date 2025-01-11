@@ -1,34 +1,17 @@
+import { TeamType } from "../types";
+
 import "../styles/menu.css";
 
-function Menu() {
-  // const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-  //   const teamName = event.target.value;
-  //   setSelectedTeam(teamName);
-  // };
+interface MenuProps {
+  team: TeamType;
+}
 
-  // const handleClick = () => {
-  //   setIsAddTeamClicked(true);
-  // };
-
-  // <select /*value={selectedTeam}*/ onChange={handleChange}>
-  //           {teams.map((team) => (
-  //             <option key={team.teamName} value={team.teamName}>
-  //               {team.teamName}
-  //             </option>
-  //           ))}
-  //         </select>
-
-  //{/* <button id="plus-button" /*onClick={handleClick}*/>+</button> */}
-
+function Menu(props: MenuProps) {
   return (
-    <header>
-      <h1>Sports Team Manager</h1>
-    </header>
+    <div className="menu">
+      <h1>{props.team.teamName}</h1>
+    </div>
   );
 }
 
 export default Menu;
-
-// add sth so you cannot name two teams the same
-
-// add sth so you cannot fill in the form with empty strings

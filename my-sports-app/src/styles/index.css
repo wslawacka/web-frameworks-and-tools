@@ -10,7 +10,7 @@ body {
 }
 
 #root {
-  padding-top: 80px;
+  padding-top: 50px;
   text-align: center;
   margin: 40px 0;
 }
@@ -26,4 +26,5 @@ body {
 #info,
 #warning {
   margin-bottom: 18px;
+  margin-top: 24px;
 }

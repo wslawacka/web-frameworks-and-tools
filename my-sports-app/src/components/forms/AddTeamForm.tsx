@@ -1,21 +1,25 @@
-import { TeamType } from "../../types";
 import axios from "axios";
+
+import { TeamType } from "../../types";
+
 import { v4 as uuidv4 } from "uuid";
+
 import "../../styles/forms.css";
 
-function AddTeamForm({
-  teams,
-  setTeams,
-  setShowForm,
-}: {
+interface AddTeamFormProps {
   teams: TeamType[];
-  setTeams: Function;
-  setShowForm: Function;
-}) {
-  const handleAddTeam = (
+  setTeams: React.Dispatch<React.SetStateAction<TeamType[]>>;
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function AddTeamForm(props: AddTeamFormProps) {
+  // function to add a team to the mock database
+  const handleAddTeam = async (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
+    // prevent the default behavior of the form so the page doesn't reload
     event.preventDefault();
+
     const form = document.getElementById("add-team-form") as HTMLFormElement;
 
     const newTeam: TeamType = {
@@ -37,20 +41,20 @@ function AddTeamForm({
       },
     };
 
-    axios
-      .post("http://localhost:3001/teams", newTeam)
-      .then((response) => {
-        setTeams([...teams, response.data]);
-        form?.reset();
-      })
-      .catch((error) =>
-        console.error("There was an error adding the team!", error)
-      );
+    try {
+      // try to add the team to the mock database
+      const response = await axios.post("http://localhost:3001/teams", newTeam);
+      props.setTeams((prev) => [...prev, response.data]);
+      form?.reset();
+    } catch (error) {
+      alert("There was an error adding the team!");
+    }
 
-    setShowForm(false);
+    props.setShowForm(false);
   };
 
   return (
+    // form to add a team to the mock database
     <form id="add-team-form">
       <h2>Add Team:</h2>
       <input name="teamName" type="text" placeholder="Name" />

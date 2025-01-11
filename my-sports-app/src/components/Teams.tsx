@@ -1,36 +1,39 @@
+import axios from "axios";
+
+import { TeamType } from "../types";
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { TeamType } from "../types";
-import axios from "axios";
-import "../styles/teamList.css";
 
-function TeamList({
-  teams,
-  setTeams,
-}: {
+import "../styles/teams.css";
+
+interface TeamsProps {
   teams: TeamType[];
-  setTeams: Function;
-}) {
+  setTeams: React.Dispatch<React.SetStateAction<TeamType[]>>;
+}
+
+function Teams(props: TeamsProps) {
+  // function to fetch teams from the mock database
   const fetchTeams = async () => {
     try {
       const response = await axios.get("http://localhost:3001/teams");
-      setTeams(response.data);
+      props.setTeams(response.data);
     } catch (error) {
-      console.error("Error fetching teams:", error);
+      alert("Failed to fetch teams. Please try again.");
     }
   };
 
+  // fetch teams from the mock database when the component is mounted
   useEffect(() => {
     fetchTeams();
   }, []);
 
+  // function to delete a team from the mock database
   const deleteTeam = async (id: string) => {
     try {
-      console.log(`Attempting to delete team with id: ${id}`);
       await axios.delete(`http://localhost:3001/teams/${id}`);
       fetchTeams();
     } catch (error) {
-      console.error("Error deleting team:", error);
       alert("Failed to delete the team. Please try again.");
     }
   };
@@ -39,8 +42,9 @@ function TeamList({
     <div className="team-list-container">
       <h1>Teams</h1>
       <h2>Click on a team name to see more information</h2>
+      {/* list of teams' names linked to the team page */}
       <ul>
-        {teams.map((team) => (
+        {props.teams.map((team) => (
           <li key={team.id}>
             <Link className="link" to={`/team/${team.id}`}>
               {team.teamName}
@@ -58,4 +62,4 @@ function TeamList({
   );
 }
 
-export default TeamList;
+export default Teams;

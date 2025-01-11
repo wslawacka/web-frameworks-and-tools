@@ -1,28 +1,31 @@
 import axios from "axios";
+
 import { PlayerType } from "../../types";
+
 import { v4 as uuidv4 } from "uuid";
+
 import "../../styles/forms.css";
 
-function AddPlayerForm({
-  players,
-  setPlayers,
-  setShowForm,
-  id,
-}: {
+interface AddPlayerFormProps {
   players: PlayerType[];
-  setPlayers: Function;
-  setShowForm: Function;
+  setPlayers: React.Dispatch<React.SetStateAction<PlayerType[]>>;
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
   id: string;
-}) {
-  const handleAddPlayer = (
+}
+
+function AddPlayerForm(props: AddPlayerFormProps) {
+  // function to add a player to the mock database
+  const handleAddPlayer = async (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
+    // prevent the default behavior of the form so the page doesn't reload
     event.preventDefault();
+
     const form = document.getElementById("add-player-form") as HTMLFormElement;
 
     const newPlayer: PlayerType = {
       id: uuidv4(),
-      teamId: id,
+      teamId: props.id,
       name: form?.playerName.value || "Name",
       position: form?.playerPosition.value || "Position",
       number: form?.playerNumber.value || 0,
@@ -34,20 +37,23 @@ function AddPlayerForm({
       goals: form?.playerGoals.value || 0,
     };
 
-    axios
-      .post(`http://localhost:3001/players?teamId=${id}`, newPlayer)
-      .then((response) => {
-        setPlayers([...players, response.data]);
-        form?.reset();
-      })
-      .catch((error) =>
-        console.error("There was an error adding the player!", error)
+    // try to add the player to the mock database
+    try {
+      const response = await axios.post(
+        `http://localhost:3001/players?teamId=${props.id}`,
+        newPlayer
       );
+      props.setPlayers((prev) => [...prev, response.data]);
+      form?.reset();
+    } catch (error) {
+      alert("There was an error adding the player!");
+    }
 
-    setShowForm(false);
+    props.setShowForm(false);
   };
 
   return (
+    // form to add a player to the mock database
     <form id="add-player-form">
       <h2>Add Player:</h2>
       <input name="playerName" type="text" placeholder="Name" />
