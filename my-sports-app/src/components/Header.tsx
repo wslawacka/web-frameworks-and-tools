@@ -9,9 +9,3 @@ function Header() {
 }
 
 export default Header;
-
-// add sth so you cannot name two teams the same
-
-// do buttons for adding goals etc
-
-// editing teams, updating players etc
