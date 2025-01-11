@@ -23,18 +23,34 @@ function AddPlayerForm(props: AddPlayerFormProps) {
 
     const form = document.getElementById("add-player-form") as HTMLFormElement;
 
+    // check if the form is filled out
+    if (
+      form?.playerName.value === "" ||
+      form?.playerPosition.value === "" ||
+      form?.playerNumber.value === 0 ||
+      form?.playerCountry.value === "" ||
+      form?.playerAge.value === 0 ||
+      form?.playerHeight.value === 0 ||
+      form?.playerWeight.value === 0 ||
+      form?.playerGames.value === 0 ||
+      form?.playerGoals.value === 0
+    ) {
+      alert("Please fill out all fields");
+      return;
+    }
+
     const newPlayer: PlayerType = {
       id: uuidv4(),
       teamId: props.id,
-      name: form?.playerName.value || "Name",
-      position: form?.playerPosition.value || "Position",
-      number: form?.playerNumber.value || 0,
-      country: form?.playerCountry.value || "Country",
-      age: form?.playerAge.value || 0,
-      height: form?.playerHeight.value || 0,
-      weight: form?.playerWeight.value || 0,
-      games: form?.playerGames.value || 0,
-      goals: form?.playerGoals.value || 0,
+      name: form?.playerName.value,
+      position: form?.playerPosition.value,
+      number: form?.playerNumber.value,
+      country: form?.playerCountry.value,
+      age: form?.playerAge.value,
+      height: form?.playerHeight.value,
+      weight: form?.playerWeight.value,
+      games: form?.playerGames.value,
+      goals: form?.playerGoals.value,
     };
 
     // try to add the player to the mock database

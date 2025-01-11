@@ -22,22 +22,50 @@ function AddTeamForm(props: AddTeamFormProps) {
 
     const form = document.getElementById("add-team-form") as HTMLFormElement;
 
+    // check if the form is filled out
+    if (
+      form?.teamName.value === "" ||
+      form?.logo.value === "" ||
+      form?.founded.value === 0 ||
+      form?.stadium.value === "" ||
+      form?.coach.value === "" ||
+      form?.president.value === "" ||
+      form?.website.value === "" ||
+      form?.league.value === "" ||
+      form?.country.value === "" ||
+      form?.city.value === "" ||
+      form?.wins.value === 0 ||
+      form?.losses.value === 0 ||
+      form?.draws.value === 0
+    ) {
+      alert("Please fill out all fields");
+      return;
+    }
+
+    // check if the team name is already in the database
+    const teamName = form?.teamName.value;
+    const existingTeam = props.teams.find((team) => team.teamName === teamName);
+    if (existingTeam) {
+      alert("Team name already exists");
+      return;
+    }
+
     const newTeam: TeamType = {
       id: uuidv4(),
-      teamName: form?.teamName.value || "Team Name",
-      logo: form?.logo.value || "https://via.placeholder.com/100",
-      founded: form?.founded.value || 0,
-      stadium: form?.stadium.value || "Stadium",
-      coach: form?.coach.value || "Coach",
-      president: form?.president.value || "President",
-      website: form?.website.value || "Website",
-      league: form?.league.value || "League",
-      country: form?.country.value || "Country",
-      city: form?.city.value || "City",
+      teamName: form?.teamName.value,
+      logo: form?.logo.value,
+      founded: form?.founded.value,
+      stadium: form?.stadium.value,
+      coach: form?.coach.value,
+      president: form?.president.value,
+      website: form?.website.value,
+      league: form?.league.value,
+      country: form?.country.value,
+      city: form?.city.value,
       statistics: {
-        wins: form?.wins.value || 0,
-        losses: form?.losses.value || 0,
-        draws: form?.draws.value || 0,
+        wins: form?.wins.value,
+        losses: form?.losses.value,
+        draws: form?.draws.value,
       },
     };
 

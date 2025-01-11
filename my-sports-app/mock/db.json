@@ -73,21 +73,21 @@
       }
     },
     {
-      "id": "c438c412-ab1f-488d-bcaa-08f05a5d124b",
-      "teamName": "nowyteamtest",
-      "logo": "https://via.placeholder.com/100",
-      "founded": 0,
-      "stadium": "Stadium",
-      "coach": "Coach",
-      "president": "President",
-      "website": "Website",
-      "league": "League",
-      "country": "Country",
-      "city": "City",
+      "id": "e48f4997-da92-4b7a-a720-5c448d4a2aac",
+      "teamName": "Werka Team2",
+      "logo": "/src/images/logo4.png",
+      "founded": "1999",
+      "stadium": "Mucharz",
+      "coach": "Kapi",
+      "president": "Werusia2",
+      "website": "www.weri.com",
+      "league": "werleague",
+      "country": "USA",
+      "city": "Lublin",
       "statistics": {
-        "wins": 0,
-        "losses": 0,
-        "draws": 0
+        "wins": "4",
+        "losses": "3",
+        "draws": "1"
       }
     }
   ],
@@ -390,6 +390,19 @@
       "weight": 0,
       "games": 0,
       "goals": 0
+    },
+    {
+      "id": "3a9af22a-89df-43aa-9533-aeb8d42fbd3b",
+      "teamId": "83f712f6-1b05-4d47-8484-ec7509331a05",
+      "name": "asd",
+      "position": "asa",
+      "number": "3",
+      "country": "sdd",
+      "age": "12",
+      "height": "344",
+      "weight": "24",
+      "games": "4",
+      "goals": "3"
     }
   ]
 }
