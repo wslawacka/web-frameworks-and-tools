@@ -37,19 +37,5 @@
       }
     }
   ],
-  "players": [
-    {
-      "id": "fc65ec03-55a3-4c8c-af34-2cb259247edd",
-      "teamId": "6191fe6e-a466-49a8-a267-56d838713cb8",
-      "name": "nowyPlayertoTen",
-      "position": "sda",
-      "number": "33",
-      "country": "USA",
-      "age": "23",
-      "height": "184",
-      "weight": "90",
-      "games": "4",
-      "goals": "3"
-    }
-  ]
+  "players": []
 }
