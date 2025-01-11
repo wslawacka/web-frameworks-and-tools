@@ -21,11 +21,18 @@
   line-height: 20px;
 }
 
-.player-info-name {
-  font-weight: 600;
+.player-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.player-info-name > span {
+span.player-info-item {
+  font-weight: 600;
+  line-height: 26px;
+}
+
+span.player-info-item > span {
   font-weight: 400;
 }
 
