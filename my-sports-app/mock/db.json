@@ -22,8 +22,8 @@
       "id": "8240b278-a2f2-4038-86d1-dace3ddee760",
       "teamName": "hhjk",
       "logo": "https://via.placeholder.com/100",
-      "founded": 0,
-      "stadium": "Stadium",
+      "founded": "11",
+      "stadium": "as",
       "coach": "Coach",
       "president": "President",
       "website": "Website",
@@ -31,8 +31,8 @@
       "country": "Country",
       "city": "City",
       "statistics": {
-        "wins": 0,
-        "losses": 0,
+        "wins": "9",
+        "losses": "2",
         "draws": 0
       }
     },
@@ -316,19 +316,6 @@
       "goals": 0
     },
     {
-      "id": "6795a345-22ac-4e5a-96e9-1135102126bd",
-      "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
-      "name": "6",
-      "position": "Position",
-      "number": 0,
-      "country": "Country",
-      "age": 0,
-      "height": 0,
-      "weight": 0,
-      "games": 0,
-      "goals": 0
-    },
-    {
       "id": "32209263-e7ff-4ecc-a546-366665f15beb",
       "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
       "name": "7",
@@ -355,32 +342,6 @@
       "goals": 0
     },
     {
-      "id": "80dddc80-9b7c-43a4-968a-3c1dc10c0783",
-      "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
-      "name": "9",
-      "position": "Position",
-      "number": 0,
-      "country": "Country",
-      "age": 0,
-      "height": 0,
-      "weight": 0,
-      "games": 0,
-      "goals": 0
-    },
-    {
-      "id": "903898de-1b92-41db-af13-cb3e49412a60",
-      "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
-      "name": "wwe",
-      "position": "",
-      "number": "",
-      "country": "",
-      "age": "",
-      "height": "",
-      "weight": "",
-      "games": "",
-      "goals": ""
-    },
-    {
       "id": "d4a217cd-584c-4539-97ed-ca03a5eee675",
       "teamId": "dd174219-9ae2-4c66-be41-7a03421b47aa",
       "name": "Werunia",
@@ -405,6 +366,19 @@
       "weight": "24",
       "games": "4",
       "goals": "3"
+    },
+    {
+      "id": "7d714d19-9fe0-4a28-9fa8-c7518545fec1",
+      "teamId": "8240b278-a2f2-4038-86d1-dace3ddee760",
+      "name": "wwe",
+      "position": "q",
+      "number": "4",
+      "country": "wsd",
+      "age": "34",
+      "height": "345",
+      "weight": "321",
+      "games": "4",
+      "goals": "5"
     }
   ]
 }
