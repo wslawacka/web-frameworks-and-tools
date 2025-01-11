@@ -28,10 +28,24 @@ function Teams(props: TeamsProps) {
     fetchTeams();
   }, []);
 
-  // function to delete a team from the mock database
+  // function to delete a team from the mock database which also deletes all players associated with the team
   const deleteTeam = async (id: string) => {
     try {
+      // fetch all players associated with the team
+      const response = await axios.get(
+        `http://localhost:3001/players?teamId=${id}`
+      );
+      const players = response.data;
+
+      // delete each player individually
+      for (const player of players) {
+        await axios.delete(`http://localhost:3001/players/${player.id}`);
+      }
+
+      // delete the team
       await axios.delete(`http://localhost:3001/teams/${id}`);
+
+      // refresh the list of teams
       fetchTeams();
     } catch (error) {
       alert("Failed to delete the team. Please try again.");
