@@ -58,3 +58,7 @@
 .add-player-button:active {
   background-color: #66817e;
 }
+
+.team-info-item {
+  display: block;
+}

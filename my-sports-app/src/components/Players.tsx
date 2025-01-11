@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 import Player from "./Player";
 
-import "../styles/playerList.css";
+import "../styles/players.css";
 
 interface PlayersProps {
   players: PlayerType[];
