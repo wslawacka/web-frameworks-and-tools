@@ -4,7 +4,7 @@
   align-items: center;
   gap: 20px;
   background-color: #d6eac3;
-  width: 36%;
+  width: 38%;
   padding: 20px;
   margin: 0 auto;
   border-radius: 2px;
@@ -85,5 +85,45 @@
 
 .statistics {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+.edit-input {
+  max-width: 130px;
+  cursor: text;
+}
+
+.edit-input:focus {
+  outline: none;
+}
+
+.edit-input,
+.save-button,
+.cancel-button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+
+.save-button,
+.cancel-button {
+  cursor: pointer;
+  margin-left: 4px;
+  background-color: #f1f7f7;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+  background-color: #a8ba96;
+}
+
+.save-button:active,
+.cancel-button:active {
+  background-color: #a8ba9673;
+}
+
+.statistics-edit-input {
+  max-width: 40px;
 }
