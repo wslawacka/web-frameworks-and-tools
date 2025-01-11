@@ -48,6 +48,8 @@ function Team(props: TeamProps) {
     if (!editingField) return;
 
     try {
+      // if the editing field is a statistics field, update the statistics field which is an object
+      // otherwise, update the team field
       const updateData = editingField.startsWith("statistics.")
         ? {
             statistics: {
@@ -57,11 +59,13 @@ function Team(props: TeamProps) {
           }
         : { [editingField]: editingValue };
 
+      // update the team in the mock database
       await axios.patch(
         `http://localhost:3001/teams/${props.team.id}`,
         updateData
       );
 
+      // update the team state
       if (editingField.startsWith("statistics.")) {
         const field = editingField.split(".")[1];
         props.team.statistics[field as keyof typeof props.team.statistics] =
@@ -98,11 +102,21 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
-              <button onClick={() => handleEdit("founded", props.team.founded)}>
+              <button
+                className="edit-button"
+                onClick={() => handleEdit("founded", props.team.founded)}
+              >
                 Edit
               </button>
             )}
@@ -116,11 +130,21 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
-              <button onClick={() => handleEdit("stadium", props.team.stadium)}>
+              <button
+                className="edit-button"
+                onClick={() => handleEdit("stadium", props.team.stadium)}
+              >
                 Edit
               </button>
             )}
@@ -134,11 +158,21 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
-              <button onClick={() => handleEdit("coach", props.team.coach)}>
+              <button
+                className="edit-button"
+                onClick={() => handleEdit("coach", props.team.coach)}
+              >
                 Edit
               </button>
             )}
@@ -152,11 +186,19 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
               <button
+                className="edit-button"
                 onClick={() => handleEdit("president", props.team.president)}
               >
                 Edit
@@ -172,11 +214,21 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
-              <button onClick={() => handleEdit("website", props.team.website)}>
+              <button
+                className="edit-button"
+                onClick={() => handleEdit("website", props.team.website)}
+              >
                 Edit
               </button>
             )}
@@ -190,11 +242,21 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
-              <button onClick={() => handleEdit("league", props.team.league)}>
+              <button
+                className="edit-button"
+                onClick={() => handleEdit("league", props.team.league)}
+              >
                 Edit
               </button>
             )}
@@ -208,80 +270,116 @@ function Team(props: TeamProps) {
                   value={editingValue ?? ""}
                   onChange={(e) => setEditingValue(e.target.value)}
                 />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
+                <button className="save-button" onClick={handleSave}>
+                  Save
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setEditingField(null)}
+                >
+                  Cancel
+                </button>
               </div>
             ) : (
-              <button onClick={() => handleEdit("city", props.team.city)}>
+              <button
+                className="edit-button"
+                onClick={() => handleEdit("city", props.team.city)}
+              >
                 Edit
               </button>
             )}
           </span>
           <span className="team-info-item">
             <span>Statistics:</span>
-            <br></br>
-            wins: {props.team.statistics.wins}
-            {editingField === "statistics.wins" ? (
-              <div>
-                <input
-                  type="number"
-                  value={editingValue ?? ""}
-                  onChange={(e) => setEditingValue(e.target.value)}
-                />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
-              </div>
-            ) : (
-              <button
-                onClick={() =>
-                  handleEdit("statistics.wins", props.team.statistics.wins)
-                }
-              >
-                Edit
-              </button>
-            )}
-            <br></br>
-            losses: {props.team.statistics.losses}
-            {editingField === "statistics.losses" ? (
-              <div>
-                <input
-                  type="number"
-                  value={editingValue ?? ""}
-                  onChange={(e) => setEditingValue(e.target.value)}
-                />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
-              </div>
-            ) : (
-              <button
-                onClick={() =>
-                  handleEdit("statistics.losses", props.team.statistics.losses)
-                }
-              >
-                Edit
-              </button>
-            )}
-            <br></br>
-            draws: {props.team.statistics.draws}
-            {editingField === "statistics.draws" ? (
-              <div>
-                <input
-                  type="number"
-                  value={editingValue ?? ""}
-                  onChange={(e) => setEditingValue(e.target.value)}
-                />
-                <button onClick={handleSave}>Save</button>
-                <button onClick={() => setEditingField(null)}>Cancel</button>
-              </div>
-            ) : (
-              <button
-                onClick={() =>
-                  handleEdit("statistics.draws", props.team.statistics.draws)
-                }
-              >
-                Edit
-              </button>
-            )}
+            <div className="statistics">
+              wins: {props.team.statistics.wins}
+              {editingField === "statistics.wins" ? (
+                <div>
+                  <input
+                    type="number"
+                    value={editingValue ?? ""}
+                    onChange={(e) => setEditingValue(e.target.value)}
+                  />
+                  <button className="save-button" onClick={handleSave}>
+                    Save
+                  </button>
+                  <button
+                    className="cancel-button"
+                    onClick={() => setEditingField(null)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="edit-button"
+                  onClick={() =>
+                    handleEdit("statistics.wins", props.team.statistics.wins)
+                  }
+                >
+                  Edit
+                </button>
+              )}
+              losses: {props.team.statistics.losses}
+              {editingField === "statistics.losses" ? (
+                <div>
+                  <input
+                    type="number"
+                    value={editingValue ?? ""}
+                    onChange={(e) => setEditingValue(e.target.value)}
+                  />
+                  <button className="save-button" onClick={handleSave}>
+                    Save
+                  </button>
+                  <button
+                    className="cancel-button"
+                    onClick={() => setEditingField(null)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="edit-button"
+                  onClick={() =>
+                    handleEdit(
+                      "statistics.losses",
+                      props.team.statistics.losses
+                    )
+                  }
+                >
+                  Edit
+                </button>
+              )}
+              draws: {props.team.statistics.draws}
+              {editingField === "statistics.draws" ? (
+                <div>
+                  <input
+                    type="number"
+                    value={editingValue ?? ""}
+                    onChange={(e) => setEditingValue(e.target.value)}
+                  />
+                  <button className="save-button" onClick={handleSave}>
+                    Save
+                  </button>
+                  <button
+                    className="cancel-button"
+                    onClick={() => setEditingField(null)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="edit-button"
+                  onClick={() =>
+                    handleEdit("statistics.draws", props.team.statistics.draws)
+                  }
+                >
+                  Edit
+                </button>
+              )}
+            </div>
           </span>
         </div>
       </div>
